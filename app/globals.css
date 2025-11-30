@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lamaSky: #00a6f4;
+  --color-lamaSkyLight: #74d4ff;
+  --color-lamaPurple: #9810fa;
+  --color-lamaPurpleLight: #c27aff;
+  --color-lamaYellow: #fcc800;
+  --color-lamaYellowLight: #ffdf20;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Root CSS Variables for Theme Colors */
+:root {
+  /* Primary Brand Colors */
+  --color-primary: 30 58 138; /* Navy Blue (blue-900) RGB values */
+  --color-secondary: 219 39 119; /* Dark Pink (pink-600) RGB values */
+
+  /* Hover States */
+  --color-primary-hover: 23 37 84; /* Darker Navy (blue-950) */
+  --color-secondary-hover: 190 24 93; /* Darker Pink (pink-700) */
+
+  /* Accent Colors */
+  --color-accent: 236 72 153; /* Pink accent (pink-500) */
+
+  /* Text Colors */
+  --color-text-primary: 31 41 55; /* gray-800 */
+  --color-text-secondary: 75 85 99; /* gray-600 */
+  --color-text-white: 255 255 255;
+
+  /* Background Colors */
+  --color-bg-white: 255 255 255;
+  --color-bg-gray: 243 244 246; /* gray-100 */
+  --color-bg-hover: 249 250 251; /* blue-50 equivalent */
+}
+
+/* Custom Utility Classes using CSS Variables */
+@layer utilities {
+  .bg-gradient-brand {
+    background: linear-gradient(
+      to right,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    );
+  }
+
+  .bg-gradient-brand-hover {
+    background: linear-gradient(
+      to right,
+      rgb(var(--color-primary-hover)),
+      rgb(var(--color-secondary-hover))
+    );
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(
+      to right,
+      rgb(var(--color-primary)),
+      rgb(var(--color-secondary))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-primary {
+    color: rgb(var(--color-text-primary));
+  }
+
+  .hover-text-primary:hover {
+    color: rgb(var(--color-primary));
+  }
+
+  .focus-ring-primary {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    --tw-ring-color: rgb(var(--color-primary));
+  }
+
+  .focus-ring-accent {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    --tw-ring-color: rgb(var(--color-accent));
+  }
+}
+/* Below classes are from college-MIS project */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+}
+
+.react-calendar__tile--active {
+  background-color: #c3ebfa !important;
+  color: black !important;
+}
+
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-toolbar-label {
+  text-align: right !important;
+  padding: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background-color: #f1f0ff !important;
+  margin-left: 2px !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
+}
+
+.rbc-time-view {
+  border-color: #eee !important;
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+.rbc-time-content {
+  border: none !important;
+}
+
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
+
+.rbc-timeslot-group {
+  background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+
+.rbc-event {
+  border: none !important;
+  color: black !important;
+  padding: 10px !important;
+  margin: 10px !important;
+  width: 99% !important;
+}
+
+.rbc-event:nth-child(1) {
+  background-color: #e2f8ff !important;
+}
+.rbc-event:nth-child(2) {
+  background-color: #fefce8 !important;
+}
+.rbc-event:nth-child(3) {
+  background-color: #f2f1ff !important;
+}
+.rbc-event:nth-child(4) {
+  background-color: #fdf2fb !important;
+}
+.rbc-event:nth-child(5) {
+  background-color: #e2f8ff !important;
+}
+.rbc-event:nth-child(6) {
+  background-color: #fefce8 !important;
+}
+.rbc-event:nth-child(7) {
+  background-color: #f2f1ff !important;
+}
+.rbc-event:nth-child(8) {
+  background-color: #fdf2fb !important;
+}
+
+.rbc-event-label {
+  color: gray !important;
+  margin-bottom: 5px;
+}
