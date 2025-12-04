@@ -4,6 +4,7 @@ import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "@/components/home/NavbarHome";
+import Footer from "@/components/home/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <ToastContainer position="bottom-right" theme="dark" />
+        <Footer />
       </body>
     </html>
     // </ClerkProvider>
