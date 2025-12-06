@@ -208,7 +208,7 @@ const PrincipalMessage: React.FC<PrincipalMessageProps> = ({
               {/* Principal's Portrait */}
               <div className="relative w-full h-full">
                 <Image
-                  src="/principal.png"
+                  src="/Principal.png"
                   alt="Dr. Humaira Jabeen, Principal of IMCG Humak"
                   fill
                   className="object-cover object-center"
