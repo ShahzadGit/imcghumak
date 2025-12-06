@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -53,7 +53,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       title: "Pre-Medical Student",
       designation: "Biology & Chemistry Specialist",
       quote:
-        "IMCG Humak's dedicated faculty and well-equipped laboratories provided me with hands-on learning experiences. The practical knowledge prepared me to tackle challenges and pursue my dream of becoming a doctor.",
+        "IMCG Humak&apos; dedicated faculty and well-equipped laboratories provided me with hands-on learning experiences. The practical knowledge prepared me to tackle challenges and pursue my dream of becoming a doctor.",
       image: "/placeholder-student-2.jpg", // Replace with actual images
     },
     {
@@ -159,7 +159,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
 
                       {/* Testimonial Quote */}
                       <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 flex-grow">
-                        "{testimonial.quote}"
+                        {testimonial.quote}
                       </p>
 
                       {/* Student Profile Section */}

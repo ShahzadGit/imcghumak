@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Pen, Brush, Computer } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface HeroSectionProps {
   className?: string;

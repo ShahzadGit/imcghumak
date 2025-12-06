@@ -96,10 +96,13 @@ const StatCard: React.FC<StatItemProps> = ({
           shadow-lg group-hover:scale-110 transition-transform duration-300"
         >
           {React.isValidElement(icon) &&
-            React.cloneElement(icon as React.ReactElement<any>, {
-              className: "w-7 h-7 text-white",
-              "aria-hidden": true,
-            })}
+            React.cloneElement(
+              icon as React.ReactElement<{ className?: string }>,
+              {
+                className: "w-7 h-7 text-white",
+                // "aria-hidden": true,
+              }
+            )}
         </div>
       </div>
 
@@ -222,7 +225,7 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Building tomorrow's leaders through quality education and
+            Building tomorrow&apos; leaders through quality education and
             comprehensive development
           </p>
         </motion.div>
