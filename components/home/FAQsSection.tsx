@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -138,7 +139,7 @@ const FAQsSection: React.FC<FAQsSectionProps> = ({ className = "" }) => {
                       {faq.answer}
                     </p>
                     {faq.link && (
-                      <a
+                      <Link
                         href={faq.link}
                         className="inline-flex items-center gap-1 text-xs md:text-sm text-primary hover:text-pink-600 font-medium transition-colors duration-200"
                       >
@@ -156,7 +157,7 @@ const FAQsSection: React.FC<FAQsSectionProps> = ({ className = "" }) => {
                             d="M17 8l4 4m0 0l-4 4m4-4H3"
                           />
                         </svg>
-                      </a>
+                      </Link>
                     )}
                   </AccordionContent>
                 </motion.div>
@@ -173,14 +174,14 @@ const FAQsSection: React.FC<FAQsSectionProps> = ({ className = "" }) => {
           className="text-center mt-10"
         >
           <p className="text-gray-600 mb-4">
-            Still have questions? We&apos;re here to help!
+            Still have questions? We're here to help!
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-brand text-white font-semibold rounded-full hover:bg-gradient-brand-hover transition-all duration-300 transform hover:scale-105 focus-ring-accent shadow-lg"
           >
             Contact Us
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
