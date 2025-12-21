@@ -174,7 +174,7 @@ const FAQsSection: React.FC<FAQsSectionProps> = ({ className = "" }) => {
           className="text-center mt-10"
         >
           <p className="text-gray-600 mb-4">
-            Still have questions? We're here to help!
+            Still have questions? We&apos;re here to help!
           </p>
           <Link
             href="/contact"
