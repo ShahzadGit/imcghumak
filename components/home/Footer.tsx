@@ -24,6 +24,10 @@ export default function Footer() {
 
           <address className="not-italic mt-3 leading-relaxed opacity-90">
             Near DHA Phase 2, Islamabad, Pakistan
+            <span>
+              <br />
+              Tel: 051-4493301
+            </span>
           </address>
         </div>
 
@@ -117,7 +121,7 @@ export default function Footer() {
       <div className="border-t border-white/10 mt-6" />
 
       {/* Bottom Copyright */}
-      <div className="text-center py-4 text-sm opacity-90">
+      <div className="text-center py-4 text-sm bg-blue-950">
         © {new Date().getFullYear()} Islamabad Model College, Humak — All Rights
         Reserved.
       </div>

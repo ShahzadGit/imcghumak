@@ -1,5 +1,4 @@
 "use client";
-"use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Users, BookOpen, FlaskConical, GraduationCap } from "lucide-react";
@@ -225,7 +224,7 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Building tomorrow&apos; leaders through quality education and
+            Building tomorrow&apos;s leaders through quality education and
             comprehensive development
           </p>
         </motion.div>
