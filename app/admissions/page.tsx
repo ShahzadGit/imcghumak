@@ -1,5 +1,4 @@
 import AdmissionsPage from "@/components/pages/AdmissionsPage";
-import Sample from "@/components/pages/Sample";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
