@@ -129,7 +129,7 @@ const Navbar: React.FC<NavbarProps> = ({ variant = "solid" }) => {
           <div className="flex items-center space-x-4">
             {/* Desktop CTA Button */}
             <Link
-              href="/get-started"
+              href="#"
               className="hidden md:inline-flex items-center px-5 py-2 bg-gradient-brand 
                 text-white text-sm font-semibold rounded-full hover:bg-gradient-brand-hover 
                 transition-all duration-300 transform hover:scale-105 focus-ring-accent 

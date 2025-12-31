@@ -91,7 +91,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="#"
+              href="https://www.facebook.com/share/1ANQcqrEyg/"
               aria-label="Facebook"
               className="hover:text-[rgb(var(--color-primary-hover))] transition"
             >
@@ -99,7 +99,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.youtube.com/@HUMAKHUB"
               aria-label="YouTube"
               className="hover:text-[rgb(var(--color-secondary-hover))] transition"
             >
@@ -107,7 +107,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.instagram.com/imcghumak/#"
               aria-label="Instagram"
               className="hover:text-[rgb(var(--color-primary-hover))] transition"
             >
