@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "@/components/home/NavbarHome";
 import Footer from "@/components/home/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -94,6 +95,7 @@ export default function RootLayout({
         {children}
         <ToastContainer position="bottom-right" theme="dark" />
         <Footer />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
