@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://imcghumak.edu.pk",
+    canonical: undefined,
   },
 
   openGraph: {

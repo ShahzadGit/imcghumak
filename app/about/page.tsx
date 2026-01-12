@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Learn about the history, mission, and vision of Islamabad Model College for Girls, Humak.",
   keywords: ["About IMCG Humak", "Girls College Islamabad", "IMCG History"],
+  // alternates: {
+  //   canonical: "https://imcghumak.edu.pk/about",
+  // },
 };
 
 export default function About() {

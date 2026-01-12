@@ -38,7 +38,7 @@ const AboutPage: React.FC = () => {
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
               Empowering young women through quality education and academic
-              excellence since 2006
+              excellence since 2003
             </p>
           </motion.div>
         </div>
