@@ -2,6 +2,7 @@ import EventsSection from "@/components/home/EventsSection";
 import FAQsSection from "@/components/home/FAQsSection";
 import HeroSection from "@/components/home/HeroSection";
 import PrincipalMessage from "@/components/home/PrincipalMessage";
+import PromotionalModal from "@/components/home/PromotionalModal";
 import StatisticsSection from "@/components/home/StatisticsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import { Metadata } from "next";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <PromotionalModal />
       <HeroSection />
       <StatisticsSection />
       <PrincipalMessage />
