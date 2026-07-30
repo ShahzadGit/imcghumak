@@ -103,15 +103,32 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className = "" }) => {
             style={{ animationDelay: "0.8s" }}
           >
             {/* Primary CTA Button */}
-            <Link
-              href="/programs"
+            {/* <Link
+              href="/prospectus.pdf"
               className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-primary 
                 font-semibold rounded-full hover:bg-white/90 hover:shadow-2xl
                 transition-all duration-300 transform hover:scale-105 focus-ring-accent
                 text-base md:text-lg shadow-xl"
               aria-label="Explore our academic programs"
             >
-              Explore Programs
+              Our Prospectus
+              <ArrowRight
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                aria-hidden="true"
+              />
+            </Link> */}
+            <Link
+              href="/prospectus.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-primary 
+    font-semibold rounded-full hover:bg-white/90 hover:shadow-2xl
+    transition-all duration-300 transform hover:scale-105
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2
+    text-base md:text-lg shadow-xl"
+              aria-label="View our prospectus (opens in new tab, PDF)"
+            >
+              Our Prospectus
               <ArrowRight
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                 aria-hidden="true"
