@@ -33,12 +33,12 @@ const GROUPS = [
     icon: HeartPulse,
   },
   {
-    name: "Humanities-01",
+    name: "Humanities (1,2,3)",
     href: "/shortlists/humanities-01.pdf",
     icon: BookOpen,
   },
   {
-    name: "Humanities-02",
+    name: "Humanities (4,5,6,7)",
     href: "/shortlists/humanities-02.pdf",
     icon: ScrollText,
   },
@@ -100,7 +100,7 @@ const ShortlistedModal: React.FC = () => {
                 {GROUPS.map((group) => {
                   const Icon = group.icon;
                   return (
-                    <Link
+                    <a
                       key={group.name}
                       href={group.href}
                       target="_blank"
@@ -118,7 +118,7 @@ const ShortlistedModal: React.FC = () => {
                       </span>
 
                       <FileText className="relative z-10 hidden sm:block w-4 h-4 text-gray-400 group-hover:text-white/90 transition-colors duration-300 flex-shrink-0" />
-                    </Link>
+                    </a>
                   );
                 })}
               </div>

@@ -189,7 +189,7 @@ const PrincipalMessage: React.FC<PrincipalMessageProps> = ({
                 {/* Principal's Name - Stylish Gradient Background */}
                 <div className="mt-6 bg-gradient-brand text-center rounded-xl p-4">
                   <p className="text-xl md:text-2xl font-serif font-bold text-white">
-                    Dr. Humaira Jabeen
+                    Dr. Humera Jabeen
                   </p>
                 </div>
               </motion.div>
