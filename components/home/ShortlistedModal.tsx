@@ -38,7 +38,7 @@ const GROUPS = [
     icon: BookOpen,
   },
   {
-    name: "Humanities (4,5,6,7)",
+    name: "Humanities (4,5,6,7,8)",
     href: "/shortlists/humanities-02.pdf",
     icon: ScrollText,
   },
