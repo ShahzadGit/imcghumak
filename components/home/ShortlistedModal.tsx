@@ -6,15 +6,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   X,
   FileText,
-  FlaskConical,
-  Cpu,
-  Cog,
-  HeartPulse,
-  BookOpen,
-  ScrollText,
-  Info,
   GraduationCap,
   ExternalLink,
+  Trophy,
+  PartyPopper,
+  Sparkles,
   LucideIcon,
 } from "lucide-react";
 
@@ -34,32 +30,11 @@ const BS_GROUPS: Group[] = [
 
 const BS_DETAILS_URL = "https://eadmissions.fde.gov.pk/bs/admission";
 
-const HSSC_GROUPS: Group[] = [
+const MERIT_LIST_GROUP: Group[] = [
   {
-    name: "General Science",
-    href: "/shortlists/general-science.pdf",
-    icon: FlaskConical,
-  },
-  { name: "ICS", href: "/shortlists/ics.pdf", icon: Cpu },
-  {
-    name: "Pre-Engineering",
-    href: "/shortlists/pre-engineering.pdf",
-    icon: Cog,
-  },
-  {
-    name: "Pre-Medical",
-    href: "/shortlists/pre-medical.pdf",
-    icon: HeartPulse,
-  },
-  {
-    name: "Humanities (1,2,3)",
-    href: "/shortlists/humanities-01.pdf",
-    icon: BookOpen,
-  },
-  {
-    name: "Humanities (4,5,6,7,8)",
-    href: "/shortlists/humanities-02.pdf",
-    icon: ScrollText,
+    name: "Merit List - HSSC-1",
+    href: "/shortlists/merit-list-hssc1.pdf",
+    icon: Trophy,
   },
 ];
 
@@ -165,33 +140,49 @@ const ShortlistedModal: React.FC = () => {
               {/* Divider between sections */}
               <div className="mx-4 sm:mx-6 border-t border-gray-200" />
 
-              {/* ===== Section 2: HSSC Admissions ===== */}
-              <div className="flex-shrink-0 bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3">
-                <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white leading-snug">
-                  Lists of Shortlisted Candidates for HSSC-1 Admissions
-                </h2>
+              {/* ===== Section 2: HSSC-1 Merit List ===== */}
+              <div className="flex-shrink-0 relative bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3 overflow-hidden">
+                {/* Subtle celebratory sparkle flasher */}
+                <Sparkles className="absolute -top-1 right-10 sm:right-16 w-4 h-4 sm:w-5 sm:h-5 text-white/70 animate-pulse" />
+                <div className="relative z-10 flex items-center gap-2">
+                  <PartyPopper className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 animate-bounce" />
+                  <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white leading-snug">
+                    Merit List of Successful Candidates for HSSC-1 Admissions
+                  </h2>
+                </div>
               </div>
 
               <div className="px-3 py-2 sm:px-6 sm:py-3">
-                <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
-                  {HSSC_GROUPS.map((group) => (
-                    <GroupCard key={group.href} group={group} />
+                {/* Centered single Merit List item */}
+                <div className="flex justify-center">
+                  {MERIT_LIST_GROUP.map((group) => (
+                    <div key={group.href} className="w-1/2 sm:w-2/5">
+                      <GroupCard group={group} />
+                    </div>
                   ))}
                 </div>
               </div>
 
-              {/* Note */}
-              <div className="mx-3 mb-2 sm:mx-6 sm:mb-3 flex gap-2 sm:gap-2.5 rounded-xl bg-pink-50 border border-pink-200 px-3 py-2 sm:px-4 sm:py-2.5">
-                <Info className="w-4 h-4 sm:w-5 sm:h-5 text-pink-600 flex-shrink-0 mt-0.5" />
-                <p className="text-[10px] sm:text-sm text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-pink-700">
-                    &quot;Shortlisted&quot;
-                  </span>{" "}
-                  students are advised to visit college between{" "}
-                  <span className="font-semibold">13th Aug till 19th Aug</span>{" "}
-                  (working days/hours) with original documents. After 19th Aug
-                  the waiting candidates will be called!
-                </p>
+              {/* Note — celebratory */}
+              <div className="mx-3 mb-2 sm:mx-6 sm:mb-3 flex gap-2 sm:gap-2.5 rounded-xl bg-emerald-50 border border-emerald-200 px-3 py-2 sm:px-4 sm:py-2.5">
+                <PartyPopper className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                <div className="text-[10px] sm:text-sm text-gray-700 leading-relaxed">
+                  <p className="font-semibold text-emerald-700 mb-1">
+                    Congratulations on Becoming a Part of the IMCG Humak Family!
+                  </p>
+                  <p className="mb-1">
+                    We warmly congratulate all successful students on their
+                    admission to Islamabad Model College for Girls, Humak.
+                  </p>
+                  <p>
+                    <span className="font-semibold text-gray-800">
+                      Important:
+                    </span>{" "}
+                    Successful candidates are advised to visit the college
+                    during working hours for fee submission and further
+                    admission formalities/details.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -268,9 +259,7 @@ export default ShortlistedModal;
 //   },
 // ];
 
-// // Shared card renderer for both sections — keeps styling in sync
-// // and fixes the invalid `sm:w-4.5 / sm:h-4.5` Tailwind classes
-// // (Tailwind's default scale has no 4.5 step; using 4 instead).
+// // Shared card renderer for both sections — keeps styling in sync.
 // const GroupCard: React.FC<{ group: Group }> = ({ group }) => {
 //   const Icon = group.icon;
 //   return (
@@ -278,7 +267,7 @@ export default ShortlistedModal;
 //       href={group.href}
 //       target="_blank"
 //       rel="noopener noreferrer"
-//       className="group flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 px-2 py-2.5 sm:px-3 sm:py-3 rounded-lg sm:rounded-xl border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 relative overflow-hidden text-center sm:text-left"
+//       className="group flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-3 px-2 py-2 sm:px-3 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 relative overflow-hidden text-center sm:text-left"
 //     >
 //       <span className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -318,7 +307,7 @@ export default ShortlistedModal;
 //           animate={{ opacity: 1 }}
 //           exit={{ opacity: 0 }}
 //           transition={{ duration: 0.3 }}
-//           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm px-3 py-3 sm:px-4 sm:py-6"
+//           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm px-3 py-3 sm:px-4 sm:py-5"
 //           onClick={() => setIsOpen(false)}
 //         >
 //           <motion.div
@@ -341,25 +330,28 @@ export default ShortlistedModal;
 //             {/* Scrollable content wrapper for both sections */}
 //             <div className="flex-1 overflow-y-auto">
 //               {/* ===== Section 1: BS Admissions ===== */}
-//               <div className="flex-shrink-0 bg-gradient-brand px-4 py-3 sm:px-6 sm:py-4 pr-12 sm:pr-14">
+//               <div className="flex-shrink-0 bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3 pr-12 sm:pr-14">
 //                 <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white leading-snug">
 //                   List of Shortlisted Candidates for BS Admissions
 //                 </h2>
 //               </div>
 
-//               <div className="px-3 py-3 sm:px-6 sm:py-4">
-//                 <div className="grid grid-cols-2 gap-2 sm:gap-3">
+//               <div className="px-3 py-2 sm:px-6 sm:py-3">
+//                 {/* Centered single BS item */}
+//                 <div className="flex justify-center">
 //                   {BS_GROUPS.map((group) => (
-//                     <GroupCard key={group.href} group={group} />
+//                     <div key={group.href} className="w-1/2 sm:w-2/5">
+//                       <GroupCard group={group} />
+//                     </div>
 //                   ))}
 //                 </div>
 
-//                 {/* View Details external link button */}
+//                 {/* View Details external link button — outlined, no fill */}
 //                 <a
 //                   href={BS_DETAILS_URL}
 //                   target="_blank"
 //                   rel="noopener noreferrer"
-//                   className="mt-3 sm:mt-4 flex items-center justify-center gap-2 w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-gradient-brand text-white text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+//                   className="mt-2 sm:mt-3 flex items-center justify-center gap-2 w-full px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border-2 border-primary text-primary text-xs sm:text-sm font-semibold hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
 //                 >
 //                   For more information please click &quot;View Details&quot;
 //                   <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
@@ -370,14 +362,14 @@ export default ShortlistedModal;
 //               <div className="mx-4 sm:mx-6 border-t border-gray-200" />
 
 //               {/* ===== Section 2: HSSC Admissions ===== */}
-//               <div className="flex-shrink-0 bg-gradient-brand px-4 py-3 sm:px-6 sm:py-4">
+//               <div className="flex-shrink-0 bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3">
 //                 <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white leading-snug">
 //                   Lists of Shortlisted Candidates for HSSC-1 Admissions
 //                 </h2>
 //               </div>
 
-//               <div className="px-3 py-3 sm:px-6 sm:py-4">
-//                 <div className="grid grid-cols-2 gap-2 sm:gap-3">
+//               <div className="px-3 py-2 sm:px-6 sm:py-3">
+//                 <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
 //                   {HSSC_GROUPS.map((group) => (
 //                     <GroupCard key={group.href} group={group} />
 //                   ))}
@@ -385,7 +377,7 @@ export default ShortlistedModal;
 //               </div>
 
 //               {/* Note */}
-//               <div className="mx-3 mb-3 sm:mx-6 sm:mb-5 flex gap-2 sm:gap-2.5 rounded-xl bg-pink-50 border border-pink-200 px-3 py-2.5 sm:px-4 sm:py-3.5">
+//               <div className="mx-3 mb-2 sm:mx-6 sm:mb-3 flex gap-2 sm:gap-2.5 rounded-xl bg-pink-50 border border-pink-200 px-3 py-2 sm:px-4 sm:py-2.5">
 //                 <Info className="w-4 h-4 sm:w-5 sm:h-5 text-pink-600 flex-shrink-0 mt-0.5" />
 //                 <p className="text-[10px] sm:text-sm text-gray-700 leading-relaxed">
 //                   <span className="font-semibold text-pink-700">
