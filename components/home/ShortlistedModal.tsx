@@ -22,8 +22,8 @@ interface Group {
 
 const BS_GROUPS: Group[] = [
   {
-    name: "BS (Urdu)",
-    href: "/shortlists/bs-urdu.pdf",
+    name: "Merit List - BS (Urdu)",
+    href: "/shortlists/1st-MeritList-bs-urdu.pdf",
     icon: GraduationCap,
   },
 ];
@@ -109,10 +109,20 @@ const ShortlistedModal: React.FC = () => {
             {/* Scrollable content wrapper for both sections */}
             <div className="flex-1 overflow-y-auto">
               {/* ===== Section 1: BS Admissions ===== */}
-              <div className="flex-shrink-0 bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3 pr-12 sm:pr-14">
+              {/* <div className="flex-shrink-0 bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3 pr-12 sm:pr-14">
                 <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white leading-snug">
                   List of Shortlisted Candidates for BS Admissions
                 </h2>
+              </div> */}
+              <div className="flex-shrink-0 relative bg-gradient-brand px-4 py-2 sm:px-6 sm:py-3 overflow-hidden">
+                {/* Subtle celebratory sparkle flasher */}
+                <Sparkles className="absolute -top-1 right-10 sm:right-16 w-4 h-4 sm:w-5 sm:h-5 text-white/70 animate-pulse" />
+                <div className="relative z-10 flex items-center gap-2">
+                  <PartyPopper className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 animate-bounce" />
+                  <h2 className="text-sm sm:text-lg md:text-xl font-bold text-white leading-snug">
+                    Merit List of Successful Candidates for BS-URDU Admissions
+                  </h2>
+                </div>
               </div>
 
               <div className="px-3 py-2 sm:px-6 sm:py-3">
