@@ -16,6 +16,7 @@ import {
   Cpu,
   FlaskConical,
   LucideIcon,
+  Book,
 } from "lucide-react";
 
 interface Group {
@@ -62,6 +63,11 @@ const SECOND_MERIT_LIST_GROUP: Group[] = [
     name: "2nd - Merit List - General Science",
     href: "/shortlists/2nd-MeritList-GeneralScience.pdf",
     icon: FlaskConical,
+  },
+  {
+    name: "2nd - Merit List - Humanities",
+    href: "/shortlists/2nd-MeritList-Humanities.pdf",
+    icon: Book,
   },
 ];
 

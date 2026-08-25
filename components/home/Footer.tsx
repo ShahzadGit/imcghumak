@@ -91,7 +91,7 @@ export default function Footer() {
 
           <div className="flex space-x-6">
             <a
-              href="https://www.facebook.com/share/1ANQcqrEyg/"
+              href="https://www.facebook.com/share/1CXKNKbzcX/"
               aria-label="Facebook"
               className="hover:text-[rgb(var(--color-primary-hover))] transition"
             >
